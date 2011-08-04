@@ -2,6 +2,7 @@ mysite/static/project-icons/*.png
 mysite/static/project-icons/**.png
 mysite/static/images/icons/projects/*
 mysite/static/images/icons/projects/**
+mysite/static/twisted-ping-dir/twisted-ping-file
 *.pyc
 *.pyo
 *.swp
@@ -27,3 +28,6 @@ mysite.egg-info/
 .vagrant
 deactivate/
 mysite/indexes/
+.settings/
+.pydevproject
+.project
