@@ -642,6 +642,8 @@ class MozillaBugzilla(BugzillaBugTracker):
         queries = {
                 'Easy bugs':
                     'https://bugzilla.mozilla.org/buglist.cgi?resolution=---;status_whiteboard_type=substring;query_format=advanced;status_whiteboard=[good%20first%20bug]',
+                'Easy bugs':
+                    'https://bugzilla.mozilla.org/buglist.cgi?resolution=---;status_whiteboard_type=substring;query_format=advanced;status_whiteboard=[mentor=',
                 #'Documentation bugs':
                     #''
                 }
@@ -652,8 +654,8 @@ class MozillaBugzilla(BugzillaBugTracker):
         # Make modifications to ret_dict using provided metadata
         # Check for the bitesized keyword
         whiteboard_text = mysite.customs.bugtrackers.bugzilla.get_tag_text_from_xml(xml_data, 'status_whiteboard')
-        ret_dict['good_for_newcomers'] = (whiteboard_text == '[good first bug]')
-        ret_dict['bite_size_tag_name'] = '[good first bug]'
+        ret_dict['good_for_newcomers'] = (whiteboard_text == '[good first bug]' or whiteboard_text == '[mentor=')
+        ret_dict['bite_size_tag_name'] = '[good first bug]' or '[mentor'
         # Then pass ret_dict back
         return ret_dict
 
