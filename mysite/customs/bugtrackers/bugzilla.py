@@ -642,7 +642,7 @@ class MozillaBugzilla(BugzillaBugTracker):
         queries = {
                 'Easy bugs':
                     'https://bugzilla.mozilla.org/buglist.cgi?resolution=---;status_whiteboard_type=substring;query_format=advanced;status_whiteboard=[good%20first%20bug]',
-                'Easy bugs':
+                'Mentored bugs':
                     'https://bugzilla.mozilla.org/buglist.cgi?resolution=---;status_whiteboard_type=substring;query_format=advanced;status_whiteboard=[mentor=',
                 #'Documentation bugs':
                     #''
